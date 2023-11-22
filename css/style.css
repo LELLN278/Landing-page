@@ -376,6 +376,7 @@ tfoot td, thead th{
 }
 
 @media (max-width: 800px) {
+
     .home-content, .grid{
         grid-template-columns: 1fr;
     }
