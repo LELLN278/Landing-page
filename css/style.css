@@ -4,11 +4,13 @@
     --gap: 3rem;
     --light-grey-color: #eee;
     --secondary-color: crimson;
+    --medium-grey-color:rgb(185, 185, 185);
 }
 
-*{
+* {
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 html{
@@ -78,7 +80,7 @@ p{
 .main-content{  
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 8rem var(--gap);
 }
 
 .section{
@@ -87,6 +89,11 @@ p{
 
 .menu-spacing{
     height: 6.5rem;
+}
+
+body .full-width{
+    width: 100%;
+    flex: 1 1 100%;
 }
 
 .menu{
@@ -145,44 +152,45 @@ p{
     left: 25%;
 }
 
-.intro-content{
+.home-content{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
-    top: -6.5rem;
+    min-height: 100vh;
+
 }
 
-.intro-text, .intro-img{
+.home-text, .home-img{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.intro-img img{
+.home-img img{
     max-width: 100%;
     height: auto;
 }
 
-.top3-content{
+.grid-content{
     max-width: 64rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     text-align: center;
 
 }
 
-.descricao-content{
+.top3-content{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.descricao-heading{  
+.top3-heading{  
     margin-bottom: 1rem;
 }
 
@@ -213,4 +221,135 @@ p{
     top: -4rem;
     left: -2rem;
     transform: rotate(5deg);
+}
+
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+    transform: translate(3%, 3%) scale(1.2) rotate(5deg);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table{
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+table td, table th{
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--light-grey-color);
+}
+
+tfoot td, thead th{
+    background-color: rgb(150, 150, 150);
+}
+
+.contact-content{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.contact-text, .contact-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.contact-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form{
+    grid-column: span 2;
+}
+
+.contact-form .form-grid{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend{
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.form-group{
+    flex: 1 1 320px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    background: var(--white-color);
+    border: none;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 10px 2px var(--secondary-color);
+}
+
+.form-group button{
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover{
+    background: var(--white-color);
+    color:var(--primary-color)
+}
+
+.form-group ::placeholder{
+    color: var(--medium-grey-color);
+}
+
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer p{
+    margin: 0;
+    padding: 3rem;
 }
