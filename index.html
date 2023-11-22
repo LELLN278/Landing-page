@@ -11,16 +11,19 @@
 </head>
 
 <body>
+    <input id="close-menu" class="close-menu" type="checkbox" role="button" aria-label="Close menu">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#home">LOGO</a></h1>
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home">LOGO</a></h1>
 
                 <nav>
-                    <ul>
+                    <ul onclick="getElementById('close-menu').checked = false;">
                         <li><a href="#intro">Intro</a></li>
                         <li><a href="#top3">Top 3</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#updates">Updates</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -176,6 +179,15 @@
         </div>
     </section>
 
+    <section id="updates" class="white-bg section">
+        <div class="main-content grid-content">
+            <h2>Future updates and applications</h2>
+            <p>This button would add a box to the row of key content boxes below the intro text. This should put the box there regardless of where the user is currently writing.</p>
+            <p>I'd suggest having a popup that asks where in the row to insert the box (at the beginning or end), what title to give the box, what text to put in the box, and where the box should link to. The entire box should serve as a link to the destination page.</p>
+            <p>You can also include a type attribute containing the MIME type of the resource, so a browser can quickly see what resources are on offer, and ignore ones that it doesn’t support</p>
+        </div>
+    </section>
+
     <section id="contact" class="main-bg section">
         <div class="main-content contact-content">
             <div class="home-text">
@@ -223,5 +235,7 @@
     <footer id="footer" class="footer white-bg">
         <p>Feito por Luiz Elmano <span class="skull">💀</span></p>
     </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 </body> 
 </html>
