@@ -437,4 +437,8 @@ tfoot td, thead th{
     .menu-spacing{
         display: none;
     }
+
+    #intro h2{
+        font-size: 5rem;
+    }
 }
