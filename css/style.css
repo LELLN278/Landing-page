@@ -506,10 +506,6 @@ tfoot td, thead th{
         display: none;
     }
 
-    #intro h2{
-        font-size: 5rem;
-    }
-
     #first-name, #last-name, #email, #message{
         width: 300px;
     }
